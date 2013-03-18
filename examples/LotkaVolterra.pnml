@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!--Created by SPNlib on 16-03-2012 at 14:29-->
+<pnml>
+  <net id="SPN" type="StochasticNet">
+    <place id="X1">
+      <initialMarking>
+        <value>
+          100
+        </value>
+      </initialMarking>
+    </place>
+    <place id="X2">
+      <initialMarking>
+        <value>
+          20
+        </value>
+      </initialMarking>
+    </place>
+    <transition id="preyBirth">
+      <rate>
+        <value>
+          1.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="predation">
+      <rate>
+        <value>
+          0.005
+        </value>
+      </rate>
+    </transition>
+    <transition id="predatorDeath">
+      <rate>
+        <value>
+          0.6
+        </value>
+      </rate>
+    </transition>
+    <arc source="X1" target="preyBirth">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="X1" target="predation">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="X2" target="predation">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="X2" target="predatorDeath">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="preyBirth" target="X1">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="predation" target="X2">
+      <value>
+        2
+      </value>
+    </arc>
+  </net>
+</pnml>

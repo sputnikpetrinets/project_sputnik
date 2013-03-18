@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gillespie</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>gillespie</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/philipp_icl/icl/comp_prj/src/gillespie.py">/home/philipp_icl/icl/comp_prj/src/gillespie.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="gillespie_data.html">gillespie_data</a><br>
+</td><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="algorithm.html#Algorithm">algorithm.Algorithm</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gillespie.html#Gillespie">Gillespie</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Gillespie">class <strong>Gillespie</strong></a>(<a href="algorithm.html#Algorithm">algorithm.Algorithm</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Subclass&nbsp;of&nbsp;<a href="algorithm.html#Algorithm">Algorithm</a>,&nbsp;allows&nbsp;<a href="#Gillespie">Gillespie</a>&nbsp;stochastic&nbsp;simulation&nbsp;algorithm&nbsp;(SSA)&nbsp;to<br>
+be&nbsp;run,&nbsp;for&nbsp;a&nbsp;specified&nbsp;run&nbsp;time&nbsp;or&nbsp;number&nbsp;of&nbsp;iterations,&nbsp;for&nbsp;a&nbsp;specified&nbsp;number&nbsp;of&nbsp;runs.<br>
+&nbsp;<br>
+Methods:<br>
+__init__<br>
+gillespie:&nbsp;protected,&nbsp;accessed&nbsp;by&nbsp;<a href="algorithm.html#Algorithm">Algorithm</a>.run_simulation<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="gillespie.html#Gillespie">Gillespie</a></dd>
+<dd><a href="algorithm.html#Algorithm">algorithm.Algorithm</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Gillespie-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="algorithm.html#Algorithm">algorithm.Algorithm</a>:<br>
+<dl><dt><a name="Gillespie-run_simulation"><strong>run_simulation</strong></a>(self)</dt><dd><tt>Runs&nbsp;simulation&nbsp;algorithm&nbsp;for&nbsp;specified&nbsp;number&nbsp;of&nbsp;runs,&nbsp;stores<br>
+output&nbsp;data&nbsp;in&nbsp;new&nbsp;objects,&nbsp;and&nbsp;returns&nbsp;list&nbsp;of&nbsp;these&nbsp;objects.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="algorithm.html#Algorithm">algorithm.Algorithm</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>algorithm</strong></dt>
+<dd><tt>Return&nbsp;algorithm&nbsp;of&nbsp;subclass&nbsp;instance.</tt></dd>
+</dl>
+<dl><dt><strong>num_iterations</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;iterations&nbsp;to&nbsp;be&nbsp;run.</tt></dd>
+</dl>
+<dl><dt><strong>num_runs</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;simulations&nbsp;to&nbsp;be&nbsp;run.</tt></dd>
+</dl>
+<dl><dt><strong>petri_net</strong></dt>
+<dd><tt>Return&nbsp;petri&nbsp;net&nbsp;to&nbsp;be&nbsp;simulated.</tt></dd>
+</dl>
+<dl><dt><strong>run_time</strong></dt>
+<dd><tt>Return&nbsp;run&nbsp;time&nbsp;of&nbsp;simulation.</tt></dd>
+</dl>
+<dl><dt><strong>simulation_data</strong></dt>
+<dd><tt>Return&nbsp;list&nbsp;of&nbsp;objects&nbsp;containing&nbsp;output&nbsp;data&nbsp;for&nbsp;each&nbsp;run.</tt></dd>
+</dl>
+<dl><dt><strong>time_step</strong></dt>
+<dd><tt>Return&nbsp;time&nbsp;step&nbsp;for&nbsp;simulation.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

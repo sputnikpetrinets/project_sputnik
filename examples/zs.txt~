@@ -1,0 +1,11 @@
+#!/Library/Frameworks/Python.framework/Versions/Current/bin/python
+
+pre = [[1, 0, 0], [2, 0, 0], [0, 1, 0], [0, 1, 0]]
+post = [[0, 0, 0], [0, 1, 0], [2, 0, 0], [0, 0, 1]]
+p = ['S1', 'S2', 'S3']
+t = ['R1', 'R2', 'R3', 'R4']
+r = [0.1, 0.002, 0.5, 0.04]
+m = [10000, 0, 0]
+
+
+

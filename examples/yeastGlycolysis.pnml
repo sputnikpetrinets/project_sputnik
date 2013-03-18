@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by SPNlib on 03-04-2012 at 10:18-->
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net id="SPN" type="Stochastic">
+    <place id="PEP">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="TRIO">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="GLCo">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Trh">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="ETOH">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="P3G">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="NADH">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="GLCi">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="F16P">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="BPG">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="GLY">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="ACE">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="F6P">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Glyc">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="SUCC">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="P2G">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="PYR">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="NAD">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="CO2">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="G6P">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Pi">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <transition id="vPFK">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGAPDHReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGLK">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vADH">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPGM">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPGKReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPGIReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPGK">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vATP">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPDCReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPGI">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vG3PDHReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPYKReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPYK">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vTreha">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPDC">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGLTReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vTrehaReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vENO">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGLKReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vALDReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vENOReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGLYCOReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vG3PDH">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vADHReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vSUCReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGAPDH">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPFKReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vPGMReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGLT">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vALD">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vATPReverse">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vSUC">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="vGLYCO">
+      <rate>
+        <value>
+          0.0
+        </value>
+      </rate>
+    </transition>
+    <arc source="F6P" target="vPFK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Pi" target="vPFK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="NADH" target="vGAPDHReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="BPG" target="vGAPDHReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="GLCi" target="vGLK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Pi" target="vGLK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="NADH" target="vADH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="ACE" target="vADH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="P3G" target="vPGM">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="P3G" target="vPGKReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Pi" target="vPGKReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="F6P" target="vPGIReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="BPG" target="vPGK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Pi" target="vATP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="ACE" target="vPDCReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="CO2" target="vPDCReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="G6P" target="vPGI">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="GLY" target="vG3PDHReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="NAD" target="vG3PDHReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="PYR" target="vPYKReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Pi" target="vPYKReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="PEP" target="vPYK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="G6P" target="vTreha">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="Pi" target="vTreha">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="PYR" target="vPDC">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="GLCi" target="vGLTReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Trh" target="vTrehaReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="P2G" target="vENO">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="G6P" target="vGLKReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="TRIO" target="vALDReverse">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="PEP" target="vENOReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Glyc" target="vGLYCOReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="TRIO" target="vG3PDH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="NADH" target="vG3PDH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="ETOH" target="vADHReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="NAD" target="vADHReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="NADH" target="vSUCReverse">
+      <value>
+        3
+      </value>
+    </arc>
+    <arc source="SUCC" target="vSUCReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="TRIO" target="vGAPDH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="NAD" target="vGAPDH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="F16P" target="vPFKReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="P2G" target="vPGMReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="GLCo" target="vGLT">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="F16P" target="vALD">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="CO2" target="vATPReverse">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="ACE" target="vSUC">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="NAD" target="vSUC">
+      <value>
+        3
+      </value>
+    </arc>
+    <arc source="G6P" target="vGLYCO">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Pi" target="vGLYCO">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPFK" target="F16P">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGAPDHReverse" target="TRIO">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGAPDHReverse" target="NAD">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLK" target="G6P">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vADH" target="ETOH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vADH" target="NAD">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPGM" target="P2G">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPGKReverse" target="BPG">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPGIReverse" target="G6P">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPGK" target="P3G">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPGK" target="Pi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vATP" target="CO2">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPDCReverse" target="PYR">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPGI" target="F6P">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vG3PDHReverse" target="TRIO">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vG3PDHReverse" target="NADH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPYKReverse" target="PEP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPYK" target="PYR">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPYK" target="Pi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vTreha" target="Trh">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPDC" target="ACE">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPDC" target="CO2">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLTReverse" target="GLCo">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vTrehaReverse" target="G6P">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="vTrehaReverse" target="Pi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vENO" target="PEP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLKReverse" target="GLCi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLKReverse" target="Pi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vALDReverse" target="F16P">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vENOReverse" target="P2G">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLYCOReverse" target="G6P">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLYCOReverse" target="Pi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vG3PDH" target="GLY">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vG3PDH" target="NAD">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vADHReverse" target="NADH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vADHReverse" target="ACE">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vSUCReverse" target="ACE">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="vSUCReverse" target="NAD">
+      <value>
+        3
+      </value>
+    </arc>
+    <arc source="vGAPDH" target="NADH">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGAPDH" target="BPG">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPFKReverse" target="F6P">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPFKReverse" target="Pi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vPGMReverse" target="P3G">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLT" target="GLCi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vALD" target="TRIO">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="vATPReverse" target="Pi">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vSUC" target="NADH">
+      <value>
+        3
+      </value>
+    </arc>
+    <arc source="vSUC" target="SUCC">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="vGLYCO" target="Glyc">
+      <value>
+        1
+      </value>
+    </arc>
+  </net>
+</pnml>

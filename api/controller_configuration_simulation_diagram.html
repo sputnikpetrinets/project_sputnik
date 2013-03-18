@@ -1,0 +1,169 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module controller_configuration_simulation_diagram</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>controller_configuration_simulation_diagram</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/philipp_icl/icl/comp_prj/src/controller_configuration_simulation_diagram.py">/home/philipp_icl/icl/comp_prj/src/controller_configuration_simulation_diagram.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="controller_configuration_simulation.html">controller_configuration_simulation</a><br>
+<a href="copy.html">copy</a><br>
+<a href="diagram.html">diagram</a><br>
+</td><td width="25%" valign=top><a href="diagram_visualisation.html">diagram_visualisation</a><br>
+<a href="gillespie.html">gillespie</a><br>
+<a href="model.html">model</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+<a href="petri_net_data.html">petri_net_data</a><br>
+<a href="stoichiometry.html">stoichiometry</a><br>
+</td><td width="25%" valign=top><a href="tau_leap.html">tau_leap</a><br>
+<a href="trajectory.html">trajectory</a><br>
+<a href="view_configuration_simulation_diagram.html">view_configuration_simulation_diagram</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="controller_configuration_simulation.html#ControllerConfigurationSimulation">controller_configuration_simulation.ControllerConfigurationSimulation</a>(<a href="controller.html#Controller">controller.Controller</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="controller_configuration_simulation_diagram.html#ControllerConfigurationSimulationDiagram">ControllerConfigurationSimulationDiagram</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ControllerConfigurationSimulationDiagram">class <strong>ControllerConfigurationSimulationDiagram</strong></a>(<a href="controller_configuration_simulation.html#ControllerConfigurationSimulation">controller_configuration_simulation.ControllerConfigurationSimulation</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#ControllerConfigurationSimulationDiagram">ControllerConfigurationSimulationDiagram</a>&nbsp;class&nbsp;is&nbsp;a&nbsp;specific&nbsp;controller&nbsp;that&nbsp;inherits&nbsp;from&nbsp;the&nbsp;general&nbsp;<a href="controller_configuration_simulation.html#ControllerConfigurationSimulation">ControllerConfigurationSimulation</a>&nbsp;class&nbsp;and&nbsp;is&nbsp;used&nbsp;to&nbsp;manage&nbsp;the&nbsp;user&nbsp;interactions&nbsp;of&nbsp;the&nbsp;simulation&nbsp;configuration&nbsp;window&nbsp;and&nbsp;the&nbsp;application&nbsp;(ViewConfigurationConfigurationSimulationDiagram).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="controller_configuration_simulation_diagram.html#ControllerConfigurationSimulationDiagram">ControllerConfigurationSimulationDiagram</a></dd>
+<dd><a href="controller_configuration_simulation.html#ControllerConfigurationSimulation">controller_configuration_simulation.ControllerConfigurationSimulation</a></dd>
+<dd><a href="controller.html#Controller">controller.Controller</a></dd>
+<dd><a href="mvc_observer.html#MVCObserver">mvc_observer.MVCObserver</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-__init__"><strong>__init__</strong></a>(self, model<font color="#909090">=None</font>, view<font color="#909090">=None</font>)</dt><dd><tt>Constructor&nbsp;of&nbsp;<a href="#ControllerConfigurationSimulationDiagram">ControllerConfigurationSimulationDiagram</a>.</tt></dd></dl>
+
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-gillespie_algorithm"><strong>gillespie_algorithm</strong></a>(self)</dt><dd><tt>Execute&nbsp;Gillespie&nbsp;algorithm.</tt></dd></dl>
+
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-plot"><strong>plot</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-tauleap_algorithm"><strong>tauleap_algorithm</strong></a>(self)</dt><dd><tt>Execute&nbsp;Tau&nbsp;Leap&nbsp;algorithm.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>auto_color_allocation</strong></dt>
+<dd><tt>Return&nbsp;flag&nbsp;for&nbsp;an&nbsp;automatic&nbsp;colour&nbsp;allocation.</tt></dd>
+</dl>
+<dl><dt><strong>auto_subplot_position_allocation</strong></dt>
+<dd><tt>Return&nbsp;flag&nbsp;for&nbsp;an&nbsp;automatic&nbsp;subplot&nbsp;position&nbsp;allocation.</tt></dd>
+</dl>
+<dl><dt><strong>control_parameter</strong></dt>
+<dd><tt>Return&nbsp;control&nbsp;parameter.</tt></dd>
+</dl>
+<dl><dt><strong>epsilon</strong></dt>
+<dd><tt>Return&nbsp;epsilon.</tt></dd>
+</dl>
+<dl><dt><strong>legend_position</strong></dt>
+<dd><tt>Return&nbsp;legend&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>legend_visibility</strong></dt>
+<dd><tt>Return&nbsp;visibility&nbsp;of&nbsp;the&nbsp;legend.</tt></dd>
+</dl>
+<dl><dt><strong>line_width</strong></dt>
+<dd><tt>Return&nbsp;line&nbsp;width.</tt></dd>
+</dl>
+<dl><dt><strong>number_columns</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;columns.</tt></dd>
+</dl>
+<dl><dt><strong>number_rows</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;rows.</tt></dd>
+</dl>
+<dl><dt><strong>number_simulations</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;simulations.</tt></dd>
+</dl>
+<dl><dt><strong>number_ssa_runs</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;SSA&nbsp;runs.</tt></dd>
+</dl>
+<dl><dt><strong>run_time</strong></dt>
+<dd><tt>Return&nbsp;run&nbsp;time.</tt></dd>
+</dl>
+<dl><dt><strong>simulations</strong></dt>
+<dd><tt>Return&nbsp;list&nbsp;of&nbsp;configurations&nbsp;for&nbsp;the&nbsp;single&nbsp;simulations&nbsp;(dictionary&nbsp;key&nbsp;is&nbsp;the&nbsp;ith&nbsp;simulation).</tt></dd>
+</dl>
+<dl><dt><strong>subplots</strong></dt>
+<dd><tt>Return&nbsp;flag&nbsp;if&nbsp;subplots&nbsp;should&nbsp;be&nbsp;created.</tt></dd>
+</dl>
+<dl><dt><strong>time_step</strong></dt>
+<dd><tt>Return&nbsp;time&nbsp;step.</tt></dd>
+</dl>
+<dl><dt><strong>title</strong></dt>
+<dd><tt>Return&nbsp;title.</tt></dd>
+</dl>
+<dl><dt><strong>title_visibility</strong></dt>
+<dd><tt>Return&nbsp;visibility&nbsp;of&nbsp;the&nbsp;title.</tt></dd>
+</dl>
+<dl><dt><strong>trajectory_configuration</strong></dt>
+<dd><tt>Return&nbsp;list&nbsp;of&nbsp;configurations&nbsp;for&nbsp;the&nbsp;single&nbsp;trajectories&nbsp;(dictionary&nbsp;key&nbsp;is&nbsp;the&nbsp;same&nbsp;as&nbsp;the&nbsp;label&nbsp;for&nbsp;the&nbsp;places).</tt></dd>
+</dl>
+<dl><dt><strong>xlabel</strong></dt>
+<dd><tt>Return&nbsp;label&nbsp;of&nbsp;the&nbsp;x&nbsp;axis.</tt></dd>
+</dl>
+<dl><dt><strong>ylabel</strong></dt>
+<dd><tt>Return&nbsp;label&nbsp;of&nbsp;the&nbsp;y&nbsp;axis.</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="controller_configuration_simulation.html#ControllerConfigurationSimulation">controller_configuration_simulation.ControllerConfigurationSimulation</a>:<br>
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-reset"><strong>reset</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;MVCObserver&nbsp;objects&nbsp;about&nbsp;a&nbsp;reset&nbsp;event.</tt></dd></dl>
+
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-undo"><strong>undo</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;Observer&nbsp;objects&nbsp;about&nbsp;an&nbsp;undo.</tt></dd></dl>
+
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-update"><strong>update</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;MVCObserver&nbsp;objects&nbsp;about&nbsp;a&nbsp;general&nbsp;data&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-update_component"><strong>update_component</strong></a>(self, key)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;Observer&nbsp;objects&nbsp;about&nbsp;a&nbsp;data&nbsp;change&nbsp;of&nbsp;a&nbsp;component.</tt></dd></dl>
+
+<dl><dt><a name="ControllerConfigurationSimulationDiagram-update_output"><strong>update_output</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;Observer&nbsp;objects&nbsp;about&nbsp;a&nbsp;data&nbsp;change&nbsp;of&nbsp;simulation&nbsp;results.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="controller_configuration_simulation.html#ControllerConfigurationSimulation">controller_configuration_simulation.ControllerConfigurationSimulation</a>:<br>
+<dl><dt><strong>algorithm</strong></dt>
+<dd><tt>Return&nbsp;algorithm.</tt></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="controller.html#Controller">controller.Controller</a>:<br>
+<dl><dt><strong>view</strong></dt>
+<dd><tt>Return&nbsp;view&nbsp;(MVCObserver-Object).</tt></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="mvc_observer.html#MVCObserver">mvc_observer.MVCObserver</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>model</strong></dt>
+<dd><tt>Return&nbsp;model&nbsp;(MVCObservable-Object).</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

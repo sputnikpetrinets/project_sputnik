@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by SPNlib version 1.0 on 2012-04-03 10:17 with libSBML version 5.3.0. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="StochasticPetriNet">
+    <listOfCompartments>
+      <compartment id="Cell" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="S1" compartment="Cell" initialAmount="10000"/>
+      <species id="S2" compartment="Cell" initialAmount="0"/>
+      <species id="S3" compartment="Cell" initialAmount="0"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="R1">
+        <listOfReactants>
+          <speciesReference species="S1" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate0" value="0.1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R2">
+        <listOfReactants>
+          <speciesReference species="S1" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate1" value="0.002"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R3">
+        <listOfReactants>
+          <speciesReference species="S2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S1" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate2" value="0.5"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R4">
+        <listOfReactants>
+          <speciesReference species="S2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate3" value="0.04"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

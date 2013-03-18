@@ -1,0 +1,170 @@
+#! /usr/bin/env python
+
+#########################################################
+# fconvert.py:                                          #
+#    Simple file conversion script, able to convert     #
+#  Petri nets file between three formats: txt (SPNlib), # 
+#  SBML and PNML.                                       #
+#                                                       #
+#  Command:                                             #
+#   > ./fconvert inputfile.ext outputfile.ext           #
+#                                                       #
+#  File extensions: .txt, .xml, .pnml and .sbml         #
+#                                                       #
+#########################################################
+
+import spnlib_io
+ ### FIX CLASSES ###
+import rparser as rpa
+import sbml_lex
+import pnml_lex
+import txt_convert
+import txt2_lex
+sbmlflag = True
+try:
+    import sbml_convert
+except ImportError:
+    print "\tNo libSBML install detected, cannot convert to/from SBML!"
+    sbmlflag = False
+import pnml_convert
+import PetriNetData as ep
+import Stoichiometry as es
+import os, sys
+
+def open_file(filename):
+    """ Safely attempts to open given filename for reading """
+    try:
+      testfile = open(filename, 'r')
+      return testfile
+    except: 
+        print "file error"
+        sys.exit()
+
+# Check given arguments
+try:
+    infile = sys.argv[1]
+    outfile = sys.argv[2]
+except IndexError:
+    print "Please specify input/output filenames (with extensions) in the format:\n\t> fconvert.py inputfile.txt outputfile.pnml"
+    sys.exit()
+
+# Open file
+print '\tOpening input file...'
+IN_FILE = open_file(infile)
+
+# Choose correct lexing procedure
+if '.txt' in IN_FILE.name:
+    lexer = txt2_lex.RLexerTxt()
+elif '.xml' in IN_FILE.name:
+    # XML could be either PNML or SBML
+    c1 = raw_input("\tSpecify XML input type: SBML/PNML? ")
+    if 'S' in c1 or 's' in c1:
+        print "\tSBML selected"
+        if sbmlflag == True:
+            lexer = sbml_lex.RLexerSBML()
+        else:
+            print "\tlibSBML not installed, SBML cannot be read!"
+            exit()
+    else:
+        print "\tPNML selected"
+        lexer = pnml_lex.RLexerPNML()
+    ### OR PNML ###
+elif '.sbml' in IN_FILE.name:
+    if sbmlflag == True:
+        lexer = sbml_lex.RLexerSBML()
+    else:
+        print "\tlibSBML not installed, SBML cannot be read!"
+        exit()
+elif '.pnml' in IN_FILE.name:
+    lexer = pnml_lex.RLexerPNML()
+else:
+    print "\tInput file extension not recognised"
+    c3 = raw_input("\tSelect file type: txt/PNML/SBML or exit? ")
+    if 'txt' in c3 or c3 =='t' or c3 =='T':
+        print "\ttxt selected"
+        lexer = txt2_lex.RLexerTxt()
+    elif 'S' in c3 or 's' in c3:
+        print "\tSBML selected"
+        if sbmlflag == True:
+            lexer = sbml_lex.RLexerSBML()
+        else:
+            print "\tlibSBML not installed, SBML cannot be read!"
+            exit()
+    elif 'P' in c3 or 'p' in c3:
+        print "\tPNML selected"
+        lexer = pnml_lex.RLexerPNML()
+    else:
+        print "\tNo file type selected\n\tExiting..."
+        exit()
+
+# Perform lexical analysis
+print '\tLexing input...'
+try:
+    TOKLIST = lexer.lex(IN_FILE)
+except:
+    print "\tCannot read Petri net (wrong format?)\n\tExiting"
+    sys.exit()
+
+# Report and display parsed input
+print '\tDetected input:'
+for token in TOKLIST:
+    print "%s = %s" % (token.label, token.value)
+
+# Parse token list to PetriNetData
+print '\tParsing input...'
+# 1) set parser
+parser = rpa.RParser()
+# 2) set token list 
+parser.data = TOKLIST
+# 3) parse token list to PetriNetData
+parser.parse()
+
+# Open output file in writeable mode
+OUT_FILE = open(outfile,'w')
+
+# Choose correct conversion procedure
+if '.txt' in OUT_FILE.name:
+    converter = txt_convert.WConverterTxt(parser.output)
+elif '.xml' in OUT_FILE.name:
+    # XML could be either PNML or SBML
+    c2 = raw_input("\tSpecify XML output type: SBML/PNML? ")
+    if 'S' in c2 or 's' in c2:
+        converter = sbml_convert.WConverterSBML(parser.output)
+    else:
+        converter = pnml_convert.WConverterPNML(parser.output)
+elif '.sbml' in OUT_FILE.name:
+    if sbmlflag == True:
+        converter = sbml_convert.WConverterSBML(parser.output)
+    else:
+        print "\tlibSBML not installed, SBML cannot be written!"
+        exit()
+elif '.pnml' in OUT_FILE.name:
+    converter = pnml_convert.WConverterPNML(parser.output)
+else:
+    print "\tInput file extension not recognised"
+    c3 = raw_input("\tSelect output file type: txt/PNML/SBML ? ")
+    if 'txt' in c3 or c3 =='t' or c3 =='T':
+        print "\ttxt selected"
+        converter = txt_convert.WConverterTxt(parser.output)
+    elif 'S' in c3 or 's' in c3:
+        print "\tSBML selected"
+        if sbmlflag == True:
+            converter = sbml_convert.WConverterSBML(parser.output)
+        else:
+            print "\tlibSBML not installed, SBML cannot be written!"
+            exit()
+    elif 'P' in c3 or 'p' in c3:
+        print "\tPNML selected"
+        converter = pnml_convert.WConverterPNML(parser.output)
+    else:
+        print "\tNo output file type selected\n\tExiting..."
+        exit()   
+
+# Save to output file
+print '\tSaving to file...'
+converter.save(OUT_FILE.name)
+
+print '\tFile created: %s' %OUT_FILE.name
+
+###############################################################################
+

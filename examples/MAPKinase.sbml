@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by SPNlib version 1.0 on 2012-03-16 14:39 with libSBML version 5.3.0. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="SPN">
+    <listOfCompartments>
+      <compartment id="Cell" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="M" compartment="Cell" initialAmount="1000"/>
+      <species id="MAPKK" compartment="Cell" initialAmount="500"/>
+      <species id="M_MAPKK" compartment="Cell" initialAmount="0"/>
+      <species id="Mp" compartment="Cell" initialAmount="0"/>
+      <species id="Mp_MAPKK" compartment="Cell" initialAmount="0"/>
+      <species id="Mpp" compartment="Cell" initialAmount="188"/>
+      <species id="MKP" compartment="Cell" initialAmount="1000"/>
+      <species id="Mpp_MKP" compartment="Cell" initialAmount="0"/>
+      <species id="Mp_MKP" compartment="Cell" initialAmount="0"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="M_MAPKK_assoc">
+        <listOfReactants>
+          <speciesReference species="M" stoichiometry="1"/>
+          <speciesReference species="MAPKK" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_MAPKK" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate0" value="0.05"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="M_MAPKK_deassoc">
+        <listOfReactants>
+          <speciesReference species="M_MAPKK" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M" stoichiometry="1"/>
+          <speciesReference species="MAPKK" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate1" value="0.5"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="M_phos">
+        <listOfReactants>
+          <speciesReference species="M_MAPKK" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MAPKK" stoichiometry="1"/>
+          <speciesReference species="Mp" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate2" value="5"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mp_MAPKK_assoc">
+        <listOfReactants>
+          <speciesReference species="MAPKK" stoichiometry="1"/>
+          <speciesReference species="Mp" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mp_MAPKK" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate3" value="0.05"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mp_MAPKK_deassoc">
+        <listOfReactants>
+          <speciesReference species="Mp_MAPKK" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MAPKK" stoichiometry="1"/>
+          <speciesReference species="Mp" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate4" value="0.5"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mp_phos">
+        <listOfReactants>
+          <speciesReference species="Mp_MAPKK" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MAPKK" stoichiometry="1"/>
+          <speciesReference species="Mpp" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate5" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mpp_MKP_assoc">
+        <listOfReactants>
+          <speciesReference species="Mpp" stoichiometry="1"/>
+          <speciesReference species="MKP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mpp_MKP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate6" value="0.05"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mpp_MKP_deassoc">
+        <listOfReactants>
+          <speciesReference species="Mpp_MKP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mpp" stoichiometry="1"/>
+          <speciesReference species="MKP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate7" value="0.5"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mpp_dephos">
+        <listOfReactants>
+          <speciesReference species="Mpp_MKP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mp" stoichiometry="1"/>
+          <speciesReference species="MKP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate8" value="5"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mp_MKP_assoc">
+        <listOfReactants>
+          <speciesReference species="Mp" stoichiometry="1"/>
+          <speciesReference species="MKP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mp_MKP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate9" value="0.05"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mp_MKP_deassoc">
+        <listOfReactants>
+          <speciesReference species="Mp_MKP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Mp" stoichiometry="1"/>
+          <speciesReference species="MKP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate10" value="0.5"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Mp_dephos">
+        <listOfReactants>
+          <speciesReference species="Mp_MKP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M" stoichiometry="1"/>
+          <speciesReference species="MKP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate11" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

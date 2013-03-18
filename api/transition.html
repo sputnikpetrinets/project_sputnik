@@ -1,0 +1,136 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module transition</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>transition</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/philipp_icl/icl/comp_prj/src/transition.py">/home/philipp_icl/icl/comp_prj/src/transition.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cairo.html">cairo</a><br>
+<a href="component.html">component</a><br>
+</td><td width="25%" valign=top><a href="copy.html">copy</a><br>
+<a href="font.html">font</a><br>
+</td><td width="25%" valign=top><a href="gtk.html">gtk</a><br>
+<a href="pygtk.html">pygtk</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="component.html#Component">component.Component</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="transition.html#Transition">Transition</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Transition">class <strong>Transition</strong></a>(<a href="component.html#Component">component.Component</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#Transition">Transition</a>&nbsp;class&nbsp;is&nbsp;used&nbsp;to&nbsp;characterise&nbsp;a&nbsp;transition&nbsp;and&nbsp;it&nbsp;inherits&nbsp;from&nbsp;the&nbsp;general&nbsp;parent&nbsp;class&nbsp;<a href="component.html#Component">Component</a>.&nbsp;Via&nbsp;a&nbsp;defined&nbsp;GraphicsObject&nbsp;the&nbsp;transition&nbsp;can&nbsp;be&nbsp;drawn&nbsp;directly&nbsp;on&nbsp;the&nbsp;referenced&nbsp;surface.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="transition.html#Transition">Transition</a></dd>
+<dd><a href="component.html#Component">component.Component</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Transition-__init__"><strong>__init__</strong></a>(self, position<font color="#909090">=[0.0, 0.0]</font>, dimension<font color="#909090">=[0.0, 0.0]</font>, edge<font color="#909090">=(0.0, 0.0, 0.0)</font>, fill<font color="#909090">=(0.0, 0.0, 0.0)</font>)</dt><dd><tt>Constructor&nbsp;of&nbsp;<a href="#Transition">Transition</a>&nbsp;and&nbsp;default&nbsp;values&nbsp;will&nbsp;be&nbsp;initialised&nbsp;for&nbsp;the&nbsp;not&nbsp;defined&nbsp;parameter.</tt></dd></dl>
+
+<dl><dt><a name="Transition-clone"><strong>clone</strong></a>(self)</dt><dd><tt>Duplication&nbsp;of&nbsp;the&nbsp;current&nbsp;transition&nbsp;and&nbsp;the&nbsp;duplicate&nbsp;will&nbsp;be&nbsp;returned.</tt></dd></dl>
+
+<dl><dt><a name="Transition-draw"><strong>draw</strong></a>(self, ctx)</dt><dd><tt>Draw&nbsp;the&nbsp;place&nbsp;onto&nbsp;the&nbsp;defined&nbsp;GraphicsContext&nbsp;ctx.</tt></dd></dl>
+
+<dl><dt><a name="Transition-zoom"><strong>zoom</strong></a>(self, factor)</dt><dd><tt>Scale&nbsp;the&nbsp;component&nbsp;by&nbsp;a&nbsp;given&nbsp;factor.&nbsp;The&nbsp;text&nbsp;size&nbsp;will&nbsp;be&nbsp;kept&nbsp;as&nbsp;it&nbsp;is&nbsp;defined.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>dimension</strong></dt>
+<dd><tt>Return&nbsp;dimension&nbsp;(x-&nbsp;and&nbsp;y-dimension&nbsp;of&nbsp;the&nbsp;rectangle&nbsp;as&nbsp;list).</tt></dd>
+</dl>
+<dl><dt><strong>font_rate</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;font&nbsp;of&nbsp;the&nbsp;rate&nbsp;(Font-Object).</tt></dd>
+</dl>
+<dl><dt><strong>rate</strong></dt>
+<dd><tt>Return&nbsp;rate.</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="component.html#Component">component.Component</a>:<br>
+<dl><dt><a name="Transition-decrease_input_count"><strong>decrease_input_count</strong></a>(self)</dt><dd><tt>Decrease&nbsp;the&nbsp;input&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="Transition-decrease_output_count"><strong>decrease_output_count</strong></a>(self)</dt><dd><tt>Decrease&nbsp;the&nbsp;output&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="Transition-increase_input_count"><strong>increase_input_count</strong></a>(self)</dt><dd><tt>Increase&nbsp;the&nbsp;input&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="Transition-increase_output_count"><strong>increase_output_count</strong></a>(self)</dt><dd><tt>Increase&nbsp;the&nbsp;output&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="Transition-is_equal"><strong>is_equal</strong></a>(self, component)</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;current&nbsp;component&nbsp;is&nbsp;equal&nbsp;with&nbsp;the&nbsp;given&nbsp;one.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="component.html#Component">component.Component</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>count_inputs</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;inputs.</tt></dd>
+</dl>
+<dl><dt><strong>count_outputs</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;outputs.</tt></dd>
+</dl>
+<dl><dt><strong>default_font</strong></dt>
+<dd><tt>Return&nbsp;a&nbsp;default&nbsp;font.</tt></dd>
+</dl>
+<dl><dt><strong>description</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;description.</tt></dd>
+</dl>
+<dl><dt><strong>font_description</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;font&nbsp;of&nbsp;the&nbsp;description&nbsp;(Font-Object).</tt></dd>
+</dl>
+<dl><dt><strong>font_label</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;font&nbsp;of&nbsp;the&nbsp;label&nbsp;(Font-Object).</tt></dd>
+</dl>
+<dl><dt><strong>key</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;key.</tt></dd>
+</dl>
+<dl><dt><strong>label</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;label.</tt></dd>
+</dl>
+<dl><dt><strong>position</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;position&nbsp;(x-&nbsp;and&nbsp;y-position&nbsp;as&nbsp;list).</tt></dd>
+</dl>
+<dl><dt><strong>rgb_edge</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;colour&nbsp;of&nbsp;edges&nbsp;(RGB-list).</tt></dd>
+</dl>
+<dl><dt><strong>rgb_fill</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;colour&nbsp;for&nbsp;filling&nbsp;the&nbsp;component&nbsp;(RGB-list).</tt></dd>
+</dl>
+<dl><dt><strong>x_offset</strong></dt>
+<dd><tt>Return&nbsp;offset&nbsp;in&nbsp;x-direction.</tt></dd>
+</dl>
+<dl><dt><strong>y_offset</strong></dt>
+<dd><tt>Return&nbsp;offset&nbsp;in&nbsp;y-direction.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,4 +1,4 @@
-project_sputnik
-===============
+Sputnik
+=======
 
-Sputnik is a stochastic Petri net library written in Python
+A Stochastic Petri Net library written in Python

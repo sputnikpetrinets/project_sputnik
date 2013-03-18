@@ -1,0 +1,196 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module inhibitory_arc</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>inhibitory_arc</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/philipp_icl/icl/comp_prj/src/inhibitory_arc.py">/home/philipp_icl/icl/comp_prj/src/inhibitory_arc.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="arc.html">arc</a><br>
+<a href="arrow_head.html">arrow_head</a><br>
+<a href="cairo.html">cairo</a><br>
+</td><td width="25%" valign=top><a href="copy.html">copy</a><br>
+<a href="gtk.html">gtk</a><br>
+<a href="inhibitory_arrow_head.html">inhibitory_arrow_head</a><br>
+</td><td width="25%" valign=top><a href="math.html">math</a><br>
+<a href="place.html">place</a><br>
+<a href="pygtk.html">pygtk</a><br>
+</td><td width="25%" valign=top><a href="transition.html">transition</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="arc.html#Arc">arc.Arc</a>(<a href="component.html#Component">component.Component</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="inhibitory_arc.html#InhibitoryArc">InhibitoryArc</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="InhibitoryArc">class <strong>InhibitoryArc</strong></a>(<a href="arc.html#Arc">arc.Arc</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="inhibitory_arc.html#InhibitoryArc">InhibitoryArc</a></dd>
+<dd><a href="arc.html#Arc">arc.Arc</a></dd>
+<dd><a href="component.html#Component">component.Component</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="InhibitoryArc-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="InhibitoryArc-clone"><strong>clone</strong></a>(self)</dt><dd><tt>Duplication&nbsp;of&nbsp;the&nbsp;current&nbsp;place&nbsp;and&nbsp;the&nbsp;duplicate&nbsp;will&nbsp;be&nbsp;returned.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-get_position_place"><strong>get_position_place</strong></a>(self, component, offset, alpha, is_origin, is_straight_line)</dt><dd><tt>Calculate&nbsp;the&nbsp;true&nbsp;position&nbsp;on&nbsp;the&nbsp;circle&nbsp;for&nbsp;a&nbsp;connection&nbsp;with&nbsp;an&nbsp;arc.&nbsp;The&nbsp;component&nbsp;defines&nbsp;the&nbsp;type&nbsp;and&nbsp;delivers&nbsp;the&nbsp;needed&nbsp;information&nbsp;about&nbsp;the&nbsp;place,&nbsp;control_point&nbsp;defines&nbsp;the&nbsp;control&nbsp;point&nbsp;position,&nbsp;alpha&nbsp;is&nbsp;the&nbsp;angle&nbsp;between&nbsp;the&nbsp;two&nbsp;components,&nbsp;is_origin&nbsp;is&nbsp;TRUE&nbsp;if&nbsp;the&nbsp;place&nbsp;is&nbsp;the&nbsp;origin&nbsp;of&nbsp;the&nbsp;arc&nbsp;and&nbsp;is_straight_line&nbsp;is&nbsp;TRUE&nbsp;when&nbsp;the&nbsp;connection&nbsp;should&nbsp;be&nbsp;a&nbsp;straight&nbsp;one.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-get_position_transition"><strong>get_position_transition</strong></a>(self, component, position, alpha, is_origin)</dt><dd><tt>Calculate&nbsp;the&nbsp;true&nbsp;position&nbsp;on&nbsp;a&nbsp;transition&nbsp;for&nbsp;a&nbsp;connection&nbsp;with&nbsp;an&nbsp;arc.&nbsp;The&nbsp;component&nbsp;defines&nbsp;the&nbsp;type&nbsp;and&nbsp;delivers&nbsp;the&nbsp;needed&nbsp;information&nbsp;about&nbsp;the&nbsp;place,&nbsp;position&nbsp;defines&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;other&nbsp;component,&nbsp;alpha&nbsp;is&nbsp;the&nbsp;angle&nbsp;between&nbsp;the&nbsp;two&nbsp;components&nbsp;and&nbsp;is_origin&nbsp;is&nbsp;TRUE&nbsp;if&nbsp;the&nbsp;transition&nbsp;is&nbsp;the&nbsp;origin&nbsp;of&nbsp;the&nbsp;arc.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-get_positions"><strong>get_positions</strong></a>(self)</dt><dd><tt>Calculate&nbsp;the&nbsp;true&nbsp;start-&nbsp;and&nbsp;end-position&nbsp;of&nbsp;the&nbsp;line&nbsp;according&nbsp;to&nbsp;the&nbsp;defined&nbsp;origin&nbsp;and&nbsp;target&nbsp;component.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="arc.html#Arc">arc.Arc</a>:<br>
+<dl><dt><a name="InhibitoryArc-calculate_control_point"><strong>calculate_control_point</strong></a>(self, start_position, end_position, x_offset, y_offset)</dt><dd><tt>Calculate&nbsp;position&nbsp;of&nbsp;the&nbsp;control&nbsp;point&nbsp;for&nbsp;a&nbsp;quadratic&nbsp;curve&nbsp;which&nbsp;is&nbsp;defined&nbsp;trough&nbsp;a&nbsp;start-&nbsp;and&nbsp;end-position&nbsp;as&nbsp;well&nbsp;as&nbsp;an&nbsp;offset&nbsp;in&nbsp;x-&nbsp;and&nbsp;y-direction&nbsp;in&nbsp;the&nbsp;centre&nbsp;of&nbsp;a&nbsp;straight&nbsp;connection&nbsp;between&nbsp;the&nbsp;start-&nbsp;and&nbsp;end-position.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-draw"><strong>draw</strong></a>(self, ctx)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="arc.html#Arc">arc.Arc</a>:<br>
+<dl><dt><strong>font_weight</strong></dt>
+<dd><tt>Return&nbsp;font&nbsp;of&nbsp;the&nbsp;weight&nbsp;(Font-Object).</tt></dd>
+</dl>
+<dl><dt><strong>line_type</strong></dt>
+<dd><tt>Return&nbsp;line&nbsp;type.</tt></dd>
+</dl>
+<dl><dt><strong>origin</strong></dt>
+<dd><tt>Return&nbsp;origin&nbsp;component&nbsp;(Component-Object).</tt></dd>
+</dl>
+<dl><dt><strong>target</strong></dt>
+<dd><tt>Return&nbsp;target&nbsp;component&nbsp;(Component-Object).</tt></dd>
+</dl>
+<dl><dt><strong>target_position</strong></dt>
+<dd><tt>Return&nbsp;target&nbsp;position.</tt></dd>
+</dl>
+<dl><dt><strong>weight</strong></dt>
+<dd><tt>Return&nbsp;weight.</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="arc.html#Arc">arc.Arc</a>:<br>
+<dl><dt><strong>LINE_TYPE_ARC_LOWER</strong> = 0</dl>
+
+<dl><dt><strong>LINE_TYPE_ARC_UPPER</strong> = 1</dl>
+
+<dl><dt><strong>LINE_TYPE_STRAIGHT</strong> = 2</dl>
+
+<hr>
+Methods inherited from <a href="component.html#Component">component.Component</a>:<br>
+<dl><dt><a name="InhibitoryArc-decrease_input_count"><strong>decrease_input_count</strong></a>(self)</dt><dd><tt>Decrease&nbsp;the&nbsp;input&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-decrease_output_count"><strong>decrease_output_count</strong></a>(self)</dt><dd><tt>Decrease&nbsp;the&nbsp;output&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-increase_input_count"><strong>increase_input_count</strong></a>(self)</dt><dd><tt>Increase&nbsp;the&nbsp;input&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-increase_output_count"><strong>increase_output_count</strong></a>(self)</dt><dd><tt>Increase&nbsp;the&nbsp;output&nbsp;counter&nbsp;by&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-is_equal"><strong>is_equal</strong></a>(self, component)</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;current&nbsp;component&nbsp;is&nbsp;equal&nbsp;with&nbsp;the&nbsp;given&nbsp;one.</tt></dd></dl>
+
+<dl><dt><a name="InhibitoryArc-zoom"><strong>zoom</strong></a>(self, factor)</dt><dd><tt>Sale&nbsp;the&nbsp;component&nbsp;by&nbsp;a&nbsp;given&nbsp;factor.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="component.html#Component">component.Component</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>count_inputs</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;inputs.</tt></dd>
+</dl>
+<dl><dt><strong>count_outputs</strong></dt>
+<dd><tt>Return&nbsp;number&nbsp;of&nbsp;outputs.</tt></dd>
+</dl>
+<dl><dt><strong>default_font</strong></dt>
+<dd><tt>Return&nbsp;a&nbsp;default&nbsp;font.</tt></dd>
+</dl>
+<dl><dt><strong>description</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;description.</tt></dd>
+</dl>
+<dl><dt><strong>font_description</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;font&nbsp;of&nbsp;the&nbsp;description&nbsp;(Font-Object).</tt></dd>
+</dl>
+<dl><dt><strong>font_label</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;font&nbsp;of&nbsp;the&nbsp;label&nbsp;(Font-Object).</tt></dd>
+</dl>
+<dl><dt><strong>key</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;key.</tt></dd>
+</dl>
+<dl><dt><strong>label</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;label.</tt></dd>
+</dl>
+<dl><dt><strong>position</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;position&nbsp;(x-&nbsp;and&nbsp;y-position&nbsp;as&nbsp;list).</tt></dd>
+</dl>
+<dl><dt><strong>rgb_edge</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;colour&nbsp;of&nbsp;edges&nbsp;(RGB-list).</tt></dd>
+</dl>
+<dl><dt><strong>rgb_fill</strong></dt>
+<dd><tt>Return&nbsp;the&nbsp;colour&nbsp;for&nbsp;filling&nbsp;the&nbsp;component&nbsp;(RGB-list).</tt></dd>
+</dl>
+<dl><dt><strong>x_offset</strong></dt>
+<dd><tt>Return&nbsp;offset&nbsp;in&nbsp;x-direction.</tt></dd>
+</dl>
+<dl><dt><strong>y_offset</strong></dt>
+<dd><tt>Return&nbsp;offset&nbsp;in&nbsp;y-direction.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-atan"><strong>atan</strong></a>(...)</dt><dd><tt><a href="#-atan">atan</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;arc&nbsp;tangent&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-atan2"><strong>atan2</strong></a>(...)</dt><dd><tt><a href="#-atan2">atan2</a>(y,&nbsp;x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;arc&nbsp;tangent&nbsp;(measured&nbsp;in&nbsp;radians)&nbsp;of&nbsp;y/x.<br>
+Unlike&nbsp;<a href="#-atan">atan</a>(y/x),&nbsp;the&nbsp;signs&nbsp;of&nbsp;both&nbsp;x&nbsp;and&nbsp;y&nbsp;are&nbsp;considered.</tt></dd></dl>
+ <dl><dt><a name="-cos"><strong>cos</strong></a>(...)</dt><dd><tt><a href="#-cos">cos</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;cosine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-sin"><strong>sin</strong></a>(...)</dt><dd><tt><a href="#-sin">sin</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;sine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-tan"><strong>tan</strong></a>(...)</dt><dd><tt><a href="#-tan">tan</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;tangent&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>pi</strong> = 3.141592653589793</td></tr></table>
+</body></html>

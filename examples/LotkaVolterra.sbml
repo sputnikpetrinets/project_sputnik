@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by SPNlib version 0.0.1a on 2012-03-16 14:08 with libSBML version 5.3.0. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model>
+    <listOfCompartments>
+      <compartment id="Cell" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="X1" compartment="Cell" initialAmount="100"/>
+      <species id="X2" compartment="Cell" initialAmount="20"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="preyBirth">
+        <listOfReactants>
+          <speciesReference species="X1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="X1" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate0" value="1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="predation">
+        <listOfReactants>
+          <speciesReference species="X1" stoichiometry="1"/>
+          <speciesReference species="X2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="X2" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate1" value="0.005"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="predatorDeath">
+        <listOfReactants>
+          <speciesReference species="X2" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate2" value="0.6"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

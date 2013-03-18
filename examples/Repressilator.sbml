@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by SPNlib version 0.0.1a on 2012-03-16 14:12 with libSBML version 5.3.0. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model>
+    <listOfCompartments>
+      <compartment id="Cell" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="gA" compartment="Cell" initialAmount="1"/>
+      <species id="pA" compartment="Cell" initialAmount="0"/>
+      <species id="gA_off" compartment="Cell" initialAmount="0"/>
+      <species id="gB" compartment="Cell" initialAmount="1"/>
+      <species id="pB" compartment="Cell" initialAmount="0"/>
+      <species id="gB_off" compartment="Cell" initialAmount="0"/>
+      <species id="gC" compartment="Cell" initialAmount="1"/>
+      <species id="pC" compartment="Cell" initialAmount="0"/>
+      <species id="gC_off" compartment="Cell" initialAmount="0"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="gA_expression">
+        <listOfReactants>
+          <speciesReference species="gA" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gA" stoichiometry="1"/>
+          <speciesReference species="pA" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate0" value="0.1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="pA_degradation">
+        <listOfReactants>
+          <speciesReference species="pA" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate1" value="0.001"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="pA_inhib_gB">
+        <listOfReactants>
+          <speciesReference species="pA" stoichiometry="1"/>
+          <speciesReference species="gB" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gB_off" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate2" value="1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="gB_reactivate">
+        <listOfReactants>
+          <speciesReference species="gB_off" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gB" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate3" value="0.0001"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="gB_expression">
+        <listOfReactants>
+          <speciesReference species="gB" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gB" stoichiometry="1"/>
+          <speciesReference species="pB" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate4" value="0.1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="pB_degradation">
+        <listOfReactants>
+          <speciesReference species="pB" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate5" value="0.001"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="pB_inhib_gC">
+        <listOfReactants>
+          <speciesReference species="pB" stoichiometry="1"/>
+          <speciesReference species="gC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gC_off" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate6" value="1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="gC_reactivate">
+        <listOfReactants>
+          <speciesReference species="gC_off" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate7" value="0.0001"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="gC_expression">
+        <listOfReactants>
+          <speciesReference species="gC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gC" stoichiometry="1"/>
+          <speciesReference species="pC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate8" value="0.1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="pC_degradation">
+        <listOfReactants>
+          <speciesReference species="pC" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate9" value="0.001"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="pC_inhib_gA">
+        <listOfReactants>
+          <speciesReference species="gA" stoichiometry="1"/>
+          <speciesReference species="pC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gA_off" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate10" value="1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="gA_reactivate">
+        <listOfReactants>
+          <speciesReference species="gA_off" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gA" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate11" value="0.0001"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

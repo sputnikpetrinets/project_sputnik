@@ -1,0 +1,333 @@
+<?xml version="1.0" ?>
+<!--Created by SPNlib on 16-03-2012 at 14:37-->
+<pnml>
+  <net id="SPN" type="StochasticNet">
+    <place id="M">
+      <initialMarking>
+        <value>
+          1000
+        </value>
+      </initialMarking>
+    </place>
+    <place id="MAPKK">
+      <initialMarking>
+        <value>
+          500
+        </value>
+      </initialMarking>
+    </place>
+    <place id="M_MAPKK">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Mp">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Mp_MAPKK">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Mpp">
+      <initialMarking>
+        <value>
+          188
+        </value>
+      </initialMarking>
+    </place>
+    <place id="MKP">
+      <initialMarking>
+        <value>
+          1000
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Mpp_MKP">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="Mp_MKP">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <transition id="M_MAPKK_assoc">
+      <rate>
+        <value>
+          0.05
+        </value>
+      </rate>
+    </transition>
+    <transition id="M_MAPKK_deassoc">
+      <rate>
+        <value>
+          0.5
+        </value>
+      </rate>
+    </transition>
+    <transition id="M_phos">
+      <rate>
+        <value>
+          5.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mp_MAPKK_assoc">
+      <rate>
+        <value>
+          0.05
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mp_MAPKK_deassoc">
+      <rate>
+        <value>
+          0.5
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mp_phos">
+      <rate>
+        <value>
+          10.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mpp_MKP_assoc">
+      <rate>
+        <value>
+          0.05
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mpp_MKP_deassoc">
+      <rate>
+        <value>
+          0.5
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mpp_dephos">
+      <rate>
+        <value>
+          5.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mp_MKP_assoc">
+      <rate>
+        <value>
+          0.05
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mp_MKP_deassoc">
+      <rate>
+        <value>
+          0.5
+        </value>
+      </rate>
+    </transition>
+    <transition id="Mp_dephos">
+      <rate>
+        <value>
+          10.0
+        </value>
+      </rate>
+    </transition>
+    <arc source="M" target="M_MAPKK_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="MAPKK" target="M_MAPKK_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="M_MAPKK" target="M_MAPKK_deassoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="M_MAPKK" target="M_phos">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="MAPKK" target="Mp_MAPKK_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp" target="Mp_MAPKK_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MAPKK" target="Mp_MAPKK_deassoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MAPKK" target="Mp_phos">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp" target="Mpp_MKP_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="MKP" target="Mpp_MKP_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp_MKP" target="Mpp_MKP_deassoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp_MKP" target="Mpp_dephos">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp" target="Mp_MKP_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="MKP" target="Mp_MKP_assoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MKP" target="Mp_MKP_deassoc">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MKP" target="Mp_dephos">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="M_MAPKK_assoc" target="M_MAPKK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="M_MAPKK_deassoc" target="M">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="M_MAPKK_deassoc" target="MAPKK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="M_phos" target="MAPKK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="M_phos" target="Mp">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MAPKK_assoc" target="Mp_MAPKK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MAPKK_deassoc" target="MAPKK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MAPKK_deassoc" target="Mp">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_phos" target="MAPKK">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_phos" target="Mpp">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp_MKP_assoc" target="Mpp_MKP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp_MKP_deassoc" target="Mpp">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp_MKP_deassoc" target="MKP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp_dephos" target="Mp">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mpp_dephos" target="MKP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MKP_assoc" target="Mp_MKP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MKP_deassoc" target="Mp">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_MKP_deassoc" target="MKP">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_dephos" target="M">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="Mp_dephos" target="MKP">
+      <value>
+        1
+      </value>
+    </arc>
+  </net>
+</pnml>

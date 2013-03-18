@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by SPNlib on 03-04-2012 at 10:17-->
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net id="SPN" type="Stochastic">
+    <place id="S1">
+      <initialMarking>
+        <value>
+          10000
+        </value>
+      </initialMarking>
+    </place>
+    <place id="S2">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="S3">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <transition id="R1">
+      <rate>
+        <value>
+          0.1
+        </value>
+      </rate>
+    </transition>
+    <transition id="R2">
+      <rate>
+        <value>
+          0.002
+        </value>
+      </rate>
+    </transition>
+    <transition id="R3">
+      <rate>
+        <value>
+          0.5
+        </value>
+      </rate>
+    </transition>
+    <transition id="R4">
+      <rate>
+        <value>
+          0.04
+        </value>
+      </rate>
+    </transition>
+    <arc source="S1" target="R1">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="S1" target="R2">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="S2" target="R3">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="S2" target="R4">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="R2" target="S2">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="R3" target="S1">
+      <value>
+        2
+      </value>
+    </arc>
+    <arc source="R4" target="S3">
+      <value>
+        1
+      </value>
+    </arc>
+  </net>
+</pnml>

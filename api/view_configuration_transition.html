@@ -1,0 +1,115 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module view_configuration_transition</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>view_configuration_transition</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/philipp_icl/icl/comp_prj/src/view_configuration_transition.py">/home/philipp_icl/icl/comp_prj/src/view_configuration_transition.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="gtk.html">gtk</a><br>
+</td><td width="25%" valign=top><a href="pygtk.html">pygtk</a><br>
+</td><td width="25%" valign=top><a href="view_configuration_component.html">view_configuration_component</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="view_configuration_component.html#ViewConfigurationComponent">view_configuration_component.ViewConfigurationComponent</a>(<a href="view.html#View">view.View</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="view_configuration_transition.html#ViewConfigurationTransition">ViewConfigurationTransition</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ViewConfigurationTransition">class <strong>ViewConfigurationTransition</strong></a>(<a href="view_configuration_component.html#ViewConfigurationComponent">view_configuration_component.ViewConfigurationComponent</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#ViewConfigurationTransition">ViewConfigurationTransition</a>&nbsp;class&nbsp;is&nbsp;a&nbsp;specific&nbsp;view&nbsp;that&nbsp;inherits&nbsp;from&nbsp;the&nbsp;general&nbsp;<a href="view_configuration_component.html#ViewConfigurationComponent">ViewConfigurationComponent</a>&nbsp;class&nbsp;and&nbsp;is&nbsp;used&nbsp;to&nbsp;visualise&nbsp;the&nbsp;configuration&nbsp;window&nbsp;for&nbsp;a&nbsp;transitions&nbsp;and&nbsp;contains&nbsp;a&nbsp;ControllerConfigurationTransition&nbsp;object.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="view_configuration_transition.html#ViewConfigurationTransition">ViewConfigurationTransition</a></dd>
+<dd><a href="view_configuration_component.html#ViewConfigurationComponent">view_configuration_component.ViewConfigurationComponent</a></dd>
+<dd><a href="view.html#View">view.View</a></dd>
+<dd><a href="mvc_observer.html#MVCObserver">mvc_observer.MVCObserver</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ViewConfigurationTransition-__init__"><strong>__init__</strong></a>(self, model<font color="#909090">=None</font>, controller<font color="#909090">=None</font>)</dt><dd><tt>Constructor&nbsp;of&nbsp;<a href="#ViewConfigurationTransition">ViewConfigurationTransition</a>.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-show"><strong>show</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;create&nbsp;and&nbsp;display&nbsp;the&nbsp;GUI&nbsp;on&nbsp;the&nbsp;screen.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="view_configuration_component.html#ViewConfigurationComponent">view_configuration_component.ViewConfigurationComponent</a>:<br>
+<dl><dt><a name="ViewConfigurationTransition-undo"><strong>undo</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;Observer&nbsp;objects&nbsp;about&nbsp;an&nbsp;undo.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-update"><strong>update</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;MVCObserver&nbsp;objects&nbsp;about&nbsp;a&nbsp;general&nbsp;data&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-update_component"><strong>update_component</strong></a>(self, key)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;Observer&nbsp;objects&nbsp;about&nbsp;a&nbsp;data&nbsp;change&nbsp;of&nbsp;a&nbsp;component.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-update_output"><strong>update_output</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;Observer&nbsp;objects&nbsp;about&nbsp;a&nbsp;data&nbsp;change&nbsp;of&nbsp;simulation&nbsp;results.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="view_configuration_component.html#ViewConfigurationComponent">view_configuration_component.ViewConfigurationComponent</a>:<br>
+<dl><dt><strong>I_CHECK_BUTTON</strong> = 4</dl>
+
+<dl><dt><strong>I_ENTRY</strong> = 1</dl>
+
+<dl><dt><strong>I_NONE</strong> = 0</dl>
+
+<dl><dt><strong>I_RADIO_BUTTON</strong> = 3</dl>
+
+<dl><dt><strong>I_SPIN_BUTTON</strong> = 2</dl>
+
+<hr>
+Methods inherited from <a href="view.html#View">view.View</a>:<br>
+<dl><dt><a name="ViewConfigurationTransition-close"><strong>close</strong></a>(self, widget)</dt><dd><tt>Close&nbsp;the&nbsp;current&nbsp;view.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-show_message_box_error"><strong>show_message_box_error</strong></a>(self, msg)</dt><dd><tt>Display&nbsp;an&nbsp;error&nbsp;message&nbsp;with&nbsp;the&nbsp;defined&nbsp;message&nbsp;msg&nbsp;on&nbsp;the&nbsp;screen.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-show_message_box_info"><strong>show_message_box_info</strong></a>(self, msg)</dt><dd><tt>Display&nbsp;an&nbsp;information&nbsp;message&nbsp;with&nbsp;the&nbsp;defined&nbsp;message&nbsp;msg&nbsp;on&nbsp;the&nbsp;screen.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-show_message_box_question"><strong>show_message_box_question</strong></a>(self, msg)</dt><dd><tt>Display&nbsp;a&nbsp;question&nbsp;message&nbsp;with&nbsp;the&nbsp;defined&nbsp;message&nbsp;msg&nbsp;on&nbsp;the&nbsp;screen.</tt></dd></dl>
+
+<dl><dt><a name="ViewConfigurationTransition-show_message_box_warning"><strong>show_message_box_warning</strong></a>(self, msg)</dt><dd><tt>Display&nbsp;a&nbsp;warning&nbsp;message&nbsp;with&nbsp;the&nbsp;defined&nbsp;message&nbsp;msg&nbsp;on&nbsp;the&nbsp;screen.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="view.html#View">view.View</a>:<br>
+<dl><dt><strong>controller</strong></dt>
+<dd><tt>Return&nbsp;controller&nbsp;(MVCObserver-Object).</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="mvc_observer.html#MVCObserver">mvc_observer.MVCObserver</a>:<br>
+<dl><dt><a name="ViewConfigurationTransition-reset"><strong>reset</strong></a>(self)</dt><dd><tt>Interface&nbsp;to&nbsp;notify&nbsp;MVCObserver&nbsp;objects&nbsp;about&nbsp;a&nbsp;reset&nbsp;event.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="mvc_observer.html#MVCObserver">mvc_observer.MVCObserver</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>model</strong></dt>
+<dd><tt>Return&nbsp;model&nbsp;(MVCObservable-Object).</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

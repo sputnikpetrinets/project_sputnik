@@ -1,0 +1,288 @@
+<?xml version="1.0" ?>
+<!--Created by SPNlib-->
+<pnml>
+  <net id=" ">
+    <place id="gA">
+      <initialMarking>
+        <value>
+          1
+        </value>
+      </initialMarking>
+    </place>
+    <place id="pA">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="gA_off">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="gB">
+      <initialMarking>
+        <value>
+          1
+        </value>
+      </initialMarking>
+    </place>
+    <place id="pB">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="gB_off">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="gC">
+      <initialMarking>
+        <value>
+          1
+        </value>
+      </initialMarking>
+    </place>
+    <place id="pC">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <place id="gC_off">
+      <initialMarking>
+        <value>
+          0
+        </value>
+      </initialMarking>
+    </place>
+    <transition id="gA_expression">
+      <rate>
+        <value>
+          0.1
+        </value>
+      </rate>
+    </transition>
+    <transition id="pA_degradation">
+      <rate>
+        <value>
+          0.001
+        </value>
+      </rate>
+    </transition>
+    <transition id="pA_inhib_gB">
+      <rate>
+        <value>
+          1.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="gB_reactivate">
+      <rate>
+        <value>
+          0.0001
+        </value>
+      </rate>
+    </transition>
+    <transition id="gB_expression">
+      <rate>
+        <value>
+          0.1
+        </value>
+      </rate>
+    </transition>
+    <transition id="pB_degradation">
+      <rate>
+        <value>
+          0.001
+        </value>
+      </rate>
+    </transition>
+    <transition id="pB_inhib_gC">
+      <rate>
+        <value>
+          1.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="gC_reactivate">
+      <rate>
+        <value>
+          0.0001
+        </value>
+      </rate>
+    </transition>
+    <transition id="gC_expression">
+      <rate>
+        <value>
+          0.1
+        </value>
+      </rate>
+    </transition>
+    <transition id="pC_degradation">
+      <rate>
+        <value>
+          0.001
+        </value>
+      </rate>
+    </transition>
+    <transition id="pC_inhib_gA">
+      <rate>
+        <value>
+          1.0
+        </value>
+      </rate>
+    </transition>
+    <transition id="gA_reactivate">
+      <rate>
+        <value>
+          0.0001
+        </value>
+      </rate>
+    </transition>
+    <arc source="gA" target="gA_expression">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pA" target="pA_degradation">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pA" target="pA_inhib_gB">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gB" target="pA_inhib_gB">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gB_off" target="gB_reactivate">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gB" target="gB_expression">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pB" target="pB_degradation">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pB" target="pB_inhib_gC">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gC" target="pB_inhib_gC">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gC_off" target="gC_reactivate">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gC" target="gC_expression">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pC" target="pC_degradation">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gA" target="pC_inhib_gA">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pC" target="pC_inhib_gA">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gA_off" target="gA_reactivate">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gA_expression" target="gA">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gA_expression" target="pA">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pA_inhib_gB" target="gB_off">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gB_reactivate" target="gB">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gB_expression" target="gB">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gB_expression" target="pB">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pB_inhib_gC" target="gC_off">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gC_reactivate" target="gC">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gC_expression" target="gC">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gC_expression" target="pC">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="pC_inhib_gA" target="gA_off">
+      <value>
+        1
+      </value>
+    </arc>
+    <arc source="gA_reactivate" target="gA">
+      <value>
+        1
+      </value>
+    </arc>
+  </net>
+</pnml>

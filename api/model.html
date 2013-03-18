@@ -1,0 +1,104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module model</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/philipp_icl/icl/comp_prj/src/model.py">/home/philipp_icl/icl/comp_prj/src/model.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="copy.html">copy</a><br>
+<a href="gtk.html">gtk</a><br>
+</td><td width="25%" valign=top><a href="memento.html">memento</a><br>
+<a href="memento_container.html">memento_container</a><br>
+</td><td width="25%" valign=top><a href="model_state.html">model_state</a><br>
+<a href="mvc_observable.html">mvc_observable</a><br>
+</td><td width="25%" valign=top><a href="pygtk.html">pygtk</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="mvc_observable.html#MVCObservable">mvc_observable.MVCObservable</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="model.html#Model">Model</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Model">class <strong>Model</strong></a>(<a href="mvc_observable.html#MVCObservable">mvc_observable.MVCObservable</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#Model">Model</a>&nbsp;class&nbsp;is&nbsp;a&nbsp;specific&nbsp;model&nbsp;which&nbsp;is&nbsp;acting&nbsp;as&nbsp;the&nbsp;core&nbsp;of&nbsp;the&nbsp;<a href="#Model">Model</a>-View-Controller&nbsp;(MVC)&nbsp;Architecture&nbsp;of&nbsp;the&nbsp;Graphical&nbsp;User&nbsp;Interface&nbsp;(GUI)&nbsp;and&nbsp;inherits&nbsp;from&nbsp;the&nbsp;general&nbsp;model&nbsp;class&nbsp;called&nbsp;<a href="mvc_observable.html#MVCObservable">MVCObservable</a>.&nbsp;It&nbsp;contains&nbsp;the&nbsp;main&nbsp;data&nbsp;and&nbsp;delivers&nbsp;interfaces&nbsp;to&nbsp;register&nbsp;and&nbsp;remove&nbsp;observers.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="model.html#Model">Model</a></dd>
+<dd><a href="mvc_observable.html#MVCObservable">mvc_observable.MVCObservable</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Model-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor&nbsp;of&nbsp;<a href="#Model">Model</a>&nbsp;and&nbsp;default&nbsp;values&nbsp;will&nbsp;be&nbsp;initialised.</tt></dd></dl>
+
+<dl><dt><a name="Model-create_snapshot"><strong>create_snapshot</strong></a>(self)</dt><dd><tt>Create&nbsp;a&nbsp;snapshot&nbsp;of&nbsp;the&nbsp;current&nbsp;data,&nbsp;that&nbsp;are&nbsp;defining&nbsp;the&nbsp;petri&nbsp;net,&nbsp;to&nbsp;allow&nbsp;the&nbsp;recreation&nbsp;of&nbsp;a&nbsp;previous&nbsp;state.&nbsp;The&nbsp;data&nbsp;will&nbsp;be&nbsp;cloned&nbsp;to&nbsp;avoid&nbsp;a&nbsp;conflict&nbsp;with&nbsp;references.</tt></dd></dl>
+
+<dl><dt><a name="Model-notify_component"><strong>notify_component</strong></a>(self, key)</dt><dd><tt>Notification&nbsp;of&nbsp;all&nbsp;registered&nbsp;observers&nbsp;that&nbsp;there&nbsp;was&nbsp;a&nbsp;change&nbsp;of&nbsp;a&nbsp;component&nbsp;with&nbsp;the&nbsp;defined&nbsp;key.</tt></dd></dl>
+
+<dl><dt><a name="Model-notify_output"><strong>notify_output</strong></a>(self)</dt><dd><tt>Notification&nbsp;of&nbsp;all&nbsp;registered&nbsp;observers&nbsp;that&nbsp;there&nbsp;was&nbsp;a&nbsp;change&nbsp;of&nbsp;the&nbsp;output&nbsp;data.</tt></dd></dl>
+
+<dl><dt><a name="Model-notify_reset"><strong>notify_reset</strong></a>(self)</dt><dd><tt>Notification&nbsp;of&nbsp;all&nbsp;registered&nbsp;observers&nbsp;that&nbsp;there&nbsp;was&nbsp;a&nbsp;reset&nbsp;event.</tt></dd></dl>
+
+<dl><dt><a name="Model-notify_undo"><strong>notify_undo</strong></a>(self)</dt><dd><tt>Notification&nbsp;of&nbsp;all&nbsp;registered&nbsp;observers&nbsp;that&nbsp;there&nbsp;was&nbsp;an&nbsp;undo&nbsp;event.</tt></dd></dl>
+
+<dl><dt><a name="Model-remove_last_snapshot"><strong>remove_last_snapshot</strong></a>(self)</dt><dd><tt>Remove&nbsp;the&nbsp;last&nbsp;created&nbsp;snapshot&nbsp;from&nbsp;the&nbsp;container.</tt></dd></dl>
+
+<dl><dt><a name="Model-restore_state"><strong>restore_state</strong></a>(self, memento)</dt><dd><tt>Restore&nbsp;the&nbsp;data&nbsp;state&nbsp;defined&nbsp;through&nbsp;the&nbsp;input&nbsp;Memento&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="Model-undo"><strong>undo</strong></a>(self)</dt><dd><tt>Restore&nbsp;the&nbsp;previous&nbsp;data&nbsp;state.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>output</strong></dt>
+<dd><tt>Return&nbsp;output&nbsp;data.</tt></dd>
+</dl>
+<dl><dt><strong>output_args</strong></dt>
+<dd><tt>Return&nbsp;output&nbsp;arguments.</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="mvc_observable.html#MVCObservable">mvc_observable.MVCObservable</a>:<br>
+<dl><dt><a name="Model-add"><strong>add</strong></a>(self, observer)</dt><dd><tt>Register&nbsp;an&nbsp;observer&nbsp;(MVCObserver-object).</tt></dd></dl>
+
+<dl><dt><a name="Model-notify"><strong>notify</strong></a>(self)</dt><dd><tt>The&nbsp;general&nbsp;interface&nbsp;to&nbsp;notify&nbsp;observers&nbsp;about&nbsp;a&nbsp;data&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="Model-remove"><strong>remove</strong></a>(self, observer)</dt><dd><tt>Remove&nbsp;an&nbsp;observer&nbsp;from&nbsp;the&nbsp;list&nbsp;of&nbsp;registered&nbsp;observers&nbsp;(MVCObserver-object).</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="mvc_observable.html#MVCObservable">mvc_observable.MVCObservable</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>data</strong></dt>
+<dd><tt>Return&nbsp;core&nbsp;data.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

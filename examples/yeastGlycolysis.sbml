@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by SPNlib version 1.0 on 2012-03-16 16:26 with libSBML version 5.3.0. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="SPN">
+    <listOfCompartments>
+      <compartment id="Cell" spatialDimensions="3"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="PEP" compartment="Cell" initialAmount="0"/> 
+      <species id="TRIO" compartment="Cell" initialAmount="0"/>
+      <species id="GLCo" compartment="Cell" initialAmount="0"/>
+      <species id="Trh" compartment="Cell" initialAmount="0"/>
+      <species id="ETOH" compartment="Cell" initialAmount="0"/>
+      <species id="P3G" compartment="Cell" initialAmount="0"/>
+      <species id="NADH" compartment="Cell" initialAmount="0"/>
+      <species id="GLCi" compartment="Cell" initialAmount="0"/>
+      <species id="F16P" compartment="Cell" initialAmount="0"/>
+      <species id="BPG" compartment="Cell" initialAmount="0"/>
+      <species id="GLY" compartment="Cell" initialAmount="0"/>
+      <species id="ACE" compartment="Cell" initialAmount="0"/>
+      <species id="F6P" compartment="Cell" initialAmount="0"/>
+      <species id="Glyc" compartment="Cell" initialAmount="0"/>
+      <species id="SUCC" compartment="Cell" initialAmount="0"/>
+      <species id="P2G" compartment="Cell" initialAmount="0"/>
+      <species id="PYR" compartment="Cell" initialAmount="0"/>
+      <species id="NAD" compartment="Cell" initialAmount="0"/>
+      <species id="CO2" compartment="Cell" initialAmount="0"/>
+      <species id="G6P" compartment="Cell" initialAmount="0"/>
+      <species id="Pi" compartment="Cell" initialAmount="0"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="vPFK">
+        <listOfReactants>
+          <speciesReference species="F6P" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F16P" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate0" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGAPDHReverse">
+        <listOfReactants>
+          <speciesReference species="NADH" stoichiometry="1"/>
+          <speciesReference species="BPG" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TRIO" stoichiometry="1"/>
+          <speciesReference species="NAD" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate1" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGLK">
+        <listOfReactants>
+          <speciesReference species="GLCi" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G6P" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate2" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vADH">
+        <listOfReactants>
+          <speciesReference species="NADH" stoichiometry="1"/>
+          <speciesReference species="ACE" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ETOH" stoichiometry="1"/>
+          <speciesReference species="NAD" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate3" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPGM">
+        <listOfReactants>
+          <speciesReference species="P3G" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P2G" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate4" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPGKReverse">
+        <listOfReactants>
+          <speciesReference species="P3G" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="BPG" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate5" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPGIReverse">
+        <listOfReactants>
+          <speciesReference species="F6P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G6P" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate6" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPGK">
+        <listOfReactants>
+          <speciesReference species="BPG" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P3G" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate7" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vATP">
+        <listOfReactants>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CO2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate8" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPDCReverse">
+        <listOfReactants>
+          <speciesReference species="ACE" stoichiometry="1"/>
+          <speciesReference species="CO2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PYR" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate9" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPGI">
+        <listOfReactants>
+          <speciesReference species="G6P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F6P" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate10" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vG3PDHReverse">
+        <listOfReactants>
+          <speciesReference species="GLY" stoichiometry="1"/>
+          <speciesReference species="NAD" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TRIO" stoichiometry="1"/>
+          <speciesReference species="NADH" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate11" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPYKReverse">
+        <listOfReactants>
+          <speciesReference species="PYR" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PEP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate12" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPYK">
+        <listOfReactants>
+          <speciesReference species="PEP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PYR" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate13" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vTreha">
+        <listOfReactants>
+          <speciesReference species="G6P" stoichiometry="2"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Trh" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate14" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPDC">
+        <listOfReactants>
+          <speciesReference species="PYR" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACE" stoichiometry="1"/>
+          <speciesReference species="CO2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate15" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGLTReverse">
+        <listOfReactants>
+          <speciesReference species="GLCi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLCo" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate16" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vTrehaReverse">
+        <listOfReactants>
+          <speciesReference species="Trh" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G6P" stoichiometry="2"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate17" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vENO">
+        <listOfReactants>
+          <speciesReference species="P2G" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PEP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate18" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGLKReverse">
+        <listOfReactants>
+          <speciesReference species="G6P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLCi" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate19" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vALDReverse">
+        <listOfReactants>
+          <speciesReference species="TRIO" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F16P" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate20" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vENOReverse">
+        <listOfReactants>
+          <speciesReference species="PEP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P2G" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate21" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGLYCOReverse">
+        <listOfReactants>
+          <speciesReference species="Glyc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G6P" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate22" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vG3PDH">
+        <listOfReactants>
+          <speciesReference species="TRIO" stoichiometry="1"/>
+          <speciesReference species="NADH" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLY" stoichiometry="1"/>
+          <speciesReference species="NAD" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate23" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vADHReverse">
+        <listOfReactants>
+          <speciesReference species="ETOH" stoichiometry="1"/>
+          <speciesReference species="NAD" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADH" stoichiometry="1"/>
+          <speciesReference species="ACE" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate24" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vSUCReverse">
+        <listOfReactants>
+          <speciesReference species="NADH" stoichiometry="3"/>
+          <speciesReference species="SUCC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACE" stoichiometry="2"/>
+          <speciesReference species="NAD" stoichiometry="3"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate25" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGAPDH">
+        <listOfReactants>
+          <speciesReference species="TRIO" stoichiometry="1"/>
+          <speciesReference species="NAD" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADH" stoichiometry="1"/>
+          <speciesReference species="BPG" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate26" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPFKReverse">
+        <listOfReactants>
+          <speciesReference species="F16P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F6P" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate27" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vPGMReverse">
+        <listOfReactants>
+          <speciesReference species="P2G" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P3G" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate28" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGLT">
+        <listOfReactants>
+          <speciesReference species="GLCo" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLCi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate29" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vALD">
+        <listOfReactants>
+          <speciesReference species="F16P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TRIO" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate30" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vATPReverse">
+        <listOfReactants>
+          <speciesReference species="CO2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate31" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vSUC">
+        <listOfReactants>
+          <speciesReference species="ACE" stoichiometry="2"/>
+          <speciesReference species="NAD" stoichiometry="3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADH" stoichiometry="3"/>
+          <speciesReference species="SUCC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate32" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="vGLYCO">
+        <listOfReactants>
+          <speciesReference species="G6P" stoichiometry="1"/>
+          <speciesReference species="Pi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Glyc" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <listOfLocalParameters>
+            <localParameter id="rate33" value="0"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
