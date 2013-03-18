@@ -9,7 +9,7 @@ import spectral_a
 import time as t
 #display imports
 #import pygtk
-import Tkinter as tk
+#import Tkinter as tk
 import sys
 class ForceDirected(object):
     '''Class to create coordinates for the initial petrinet layout
