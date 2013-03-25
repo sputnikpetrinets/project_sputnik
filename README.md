@@ -25,3 +25,5 @@ Change into the created directory
 And run the program using
 
 `python run-sputnik.py`
+
+See the [manual](MANUAL.pdf?raw=True) (PDF) for detailed information
