@@ -4,9 +4,13 @@ Sputnik
 A Stochastic Petri Net library written in Python
 
 ##Download
-Download the source as a zip using the zip button above
+Download the source as a zipball using the button above:
 
 ![Screenshot](http://oliverpalmer.net/imperial/sputnik/save_source.png)
+
+Or via your local git client:
+
+`git clone git://github.com/sputnikpetrinets/project_sputnik`
 
 ##Install
 
