@@ -14,11 +14,11 @@ Or via your local git client:
 
 ##Install
 
-unzip the files
+First unzip the files
 
 `unzip project_sputnik-master.zip`
 
-change into the created directory
+Change into the created directory
 
 `cd project_sputnik-master/`
 
