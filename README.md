@@ -20,4 +20,4 @@ change into the created directory
 
 And run the program using
 
-`python main.py`
+`python run-sputnik.py`
