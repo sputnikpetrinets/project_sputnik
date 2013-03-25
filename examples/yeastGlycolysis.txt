@@ -1,4 +1,4 @@
-## SPNlib example file - yeast glycolysis Petri net ##
+## Sputnik example file - yeast glycolysis Petri net ##
 
 p = ['PEP','TRIO','GLCo','Trh','ETOH','P3G','NADH','GLCi','F16P','BPG','GLY','ACE','F6P','Glyc','SUCC','P2G','PYR','NAD','CO2','G6P','Pi']
 r = [0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.]

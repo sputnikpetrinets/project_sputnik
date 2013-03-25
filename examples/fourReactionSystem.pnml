@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Created by SPNlib on 03-04-2012 at 10:17-->
+<!--Created by Sputnik on 03-04-2012 at 10:17-->
 <pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
   <net id="SPN" type="Stochastic">
     <place id="S1">

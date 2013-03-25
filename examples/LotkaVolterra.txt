@@ -1,4 +1,4 @@
-## SPNlib example file: Lotka-Volterra Predator-prey model ##
+## Sputnik example file: Lotka-Volterra Predator-prey model ##
 
 p = ['X1','X2']
 r = [1.,0.005,0.6]
