@@ -226,8 +226,8 @@ class ForceDirected(object):
                             self.__pos[4][vertex_i] = self.__pos[4][vertex_i] + repulsive_strength*dy/distance
                         else:
                             print "nodes stacked - perturbing"
-                            self.__pos[3][vertex_i] = self.__pos[3][vertex_i] + overlapped_displacement
-                            self.__pos[4][vertex_i] = self.__pos[4][vertex_i] + overlapped_displacement
+                            self.__pos[3][vertex_i] = self.__pos[3][vertex_i] + overlapped_displacement_dist
+                            self.__pos[4][vertex_i] = self.__pos[4][vertex_i] + overlapped_displacement_dist
 
                         #calculate attractive forces
                         for pair in self.__connected:
@@ -245,8 +245,8 @@ class ForceDirected(object):
                                 else:
                                     #on top of node 
                                     print "stacked nodes"
-                                    self.__pos[3][vertex_i] = self.__pos[3][vertex_i] + overlapped_displacement 
-                                    self.__pos[4][vertex_i] = self.__pos[4][vertex_i] + overlapped_displacement 
+                                    self.__pos[3][vertex_i] = self.__pos[3][vertex_i] + overlapped_displacement_dist 
+                                    self.__pos[4][vertex_i] = self.__pos[4][vertex_i] + overlapped_displacement_dist 
 
             #set new velocity based on current velocity
             # and the combined attractive/repulsive forces
