@@ -2,7 +2,7 @@ import convert
 try:
     import libsbml as lb
 except ImportError:
-    print "libSBML not installed!"
+    print "NOTE: libSBML Python API not installed - Sputnik is unable to read or write SBML. To install libSBML see: http://sbml.org/Software/libSBML"
     raise AttributeError
 
 class WConverterSBML(convert.WConvert):
